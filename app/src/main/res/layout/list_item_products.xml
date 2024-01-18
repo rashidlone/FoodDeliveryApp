@@ -1,0 +1,98 @@
+<!-- res/layout/list_item_products.xml -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imageProduct"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+    android:layout_alignParentStart="true"
+    android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/textProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_toEndOf="@id/imageProduct"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_alignTop="@id/imageProduct"
+        android:text="Product Name" />
+
+    <TextView
+        android:id="@+id/textProductDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginStart="16dp"
+        android:layout_below="@id/textProductName"
+        android:layout_toEndOf="@id/imageProduct"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="Product Description" />
+
+    <TextView
+        android:id="@+id/textProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"
+        android:layout_below="@id/textProductDescription"
+        android:layout_toEndOf="@id/imageProduct"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="Price: $19.99" />
+
+    <Button
+        android:id="@+id/btnAddToCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add to Cart"
+        android:drawableEnd="@drawable/cart"
+        android:drawableTint="@color/white"
+        android:layout_marginStart="16dp"
+        android:layout_below="@id/textProductPrice"
+        android:layout_toEndOf="@id/imageProduct"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <LinearLayout
+        android:id="@+id/quantityLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAddToCart"
+        android:layout_toEndOf="@id/imageProduct"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/btnDecrease"
+            android:layout_width="30dp"
+            android:src="@drawable/minus"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/textQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <ImageView
+            android:id="@+id/btnIncrease"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/add"/>
+    </LinearLayout>
+
+</RelativeLayout>

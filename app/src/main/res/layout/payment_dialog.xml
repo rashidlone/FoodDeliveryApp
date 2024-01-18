@@ -1,0 +1,54 @@
+<!-- res/layout/payment_dialog.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextCardHolderName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Card Holder Name"/>
+
+    <EditText
+        android:id="@+id/editTextCardNumber"
+        android:layout_width="match_parent"
+        android:inputType="number"
+        android:maxLength="16"
+        android:layout_height="wrap_content"
+        android:hint="Card Number"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextExpiryMonth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:maxLength="2"
+            android:hint="MM"/>
+
+        <EditText
+            android:id="@+id/editTextExpiryYear"
+            android:layout_width="0dp"
+            android:inputType="number"
+            android:maxLength="2"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="YY"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextCVV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="3"
+        android:inputType="number"
+        android:hint="CVV"/>
+
+</LinearLayout>

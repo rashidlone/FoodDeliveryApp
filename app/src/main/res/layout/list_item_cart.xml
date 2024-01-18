@@ -1,0 +1,63 @@
+<!-- res/layout/list_item_cart.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/imageProduct"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/textProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imageProduct"
+        android:layout_marginStart="8dp"
+        android:text="Product Name"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textProductName"
+        android:layout_toRightOf="@id/imageProduct"
+        android:layout_marginStart="8dp"
+        android:text="Price: $0.00"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textProductQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textProductPrice"
+        android:layout_toRightOf="@id/imageProduct"
+        android:layout_marginStart="8dp"
+        android:text="Quantity: 1"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            android:text="Remove"
+            android:drawableEnd="@drawable/delete"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
